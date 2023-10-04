@@ -4,8 +4,10 @@ import os
 from datetime import datetime
 from fabric.api import env, local, put, run, runs_once
 
+
 env.hosts = ["34.73.0.174", "35.196.78.105"]
 """The list of host server IP addresses."""
+
 
 @runs_once
 def do_pack():
@@ -29,6 +31,7 @@ def do_pack():
     except Exception:
         output = None
     return output
+
 
 def do_deploy(archive_path):
     """Deploys the static files to the host servers.
@@ -55,3 +58,18 @@ def do_deploy(archive_path):
     except Exception:
         success = False
     return success
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
